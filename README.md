@@ -15,7 +15,7 @@ Install the dependencies via pip:
 
 #### Important
 
-Add you github cookie sessions 
+Add you github cookie sessions
 <pre>
 
 _headers_get = {
