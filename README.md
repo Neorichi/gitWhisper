@@ -1,5 +1,5 @@
 # gitWhisper
-> Get the newest emails from code repository results github by tags filtering (Python3 based)
+> Get the newest emails  and possible passwords  from code repository results github by tags filtering (Python3 based)
 
 
 ## Instalation
