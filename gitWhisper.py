@@ -81,7 +81,7 @@ def searchEmail(target_url):
     return emails,lines
 
 
-def getGithutEmail(page,search,conn):
+def getGithubEmails(page,search,conn):
     if telegram_on:
         mi_bot = telegram.Bot(token=TOKEN)
         mi_bot_updater = Updater(mi_bot.token)
@@ -159,7 +159,7 @@ def main():
             print("Tag: %s" % tag)
 
             # Search first page = 1
-            getGithutEmail(1,tag,conn)
+            getGithubEmails(1,tag,conn)
             conn.commit()
             time.sleep(time_tag)
 
