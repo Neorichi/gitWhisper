@@ -57,8 +57,8 @@ mi_canal = xxxxxx
 </pre>
 
 ## Usage
-<pre>usage: python3 gitwhisper.py  </pre>
-<pre>usage: python3 gitwhisper.py tag1,tag2,tag3 </pre>
+<pre>usage: python3 gitWhisper.py  </pre>
+<pre>usage: python3 gitWhisper.py tag1,tag2,tag3 </pre>
 
 
 ## Example
