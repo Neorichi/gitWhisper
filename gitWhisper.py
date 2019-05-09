@@ -11,6 +11,7 @@ from telegram import ReplyKeyboardMarkup
 import pyfiglet
 
 
+
 #### Global ####
 #Tags to search
 tags = []
@@ -66,7 +67,7 @@ def cleanhtml(raw_html):
     return cleantext
 
 
-def search_email(target_url):
+def searchEmail(target_url):
     result = requests.get(
         target_url,
         headers=_headers_get
@@ -80,7 +81,7 @@ def search_email(target_url):
     return emails,lines
 
 
-def get_github_email(page,search,conn):
+def getGithutEmail(page,search,conn):
     if telegram_on:
         mi_bot = telegram.Bot(token=TOKEN)
         mi_bot_updater = Updater(mi_bot.token)
@@ -106,7 +107,7 @@ def get_github_email(page,search,conn):
         title_url = str(url.text)
 
         src = str("https://raw.githubusercontent.com"+url['href'].replace("/blob", ""))
-        emails,lines = search_email(src)
+        emails,lines = searchEmail(src)
         emails_json = addslashes(str(json.dumps(emails)))
         lines_json = addslashes(str(json.dumps(lines)))
 
@@ -158,7 +159,7 @@ def main():
             print("Tag: %s" % tag)
 
             # Search first page = 1
-            get_github_email(1,tag,conn)
+            getGithutEmail(1,tag,conn)
             conn.commit()
             time.sleep(time_tag)
 
