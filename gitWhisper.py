@@ -52,7 +52,7 @@ CREATE TABLE `github` (
 #### Telegram Config #### [Optional]
 telegram_on = False
 TOKEN = 'xxxxx:xxxx-xxx'
-mi_canal = xxxxxx
+mi_canal = 11111
 
 
 
