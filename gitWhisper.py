@@ -16,7 +16,7 @@ import pyfiglet
 tags = []
 #Time to waint betewen request tag
 time_tag = 10
-git remote add origin https://github.com/Neorichi/gitWhisper
+
 
 #### Session GitHub ####
 #Change the cookie for you github cookie session
