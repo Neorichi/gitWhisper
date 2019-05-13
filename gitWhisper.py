@@ -35,7 +35,7 @@ password="xxxxxx"
 
 #Example schema table
 '''
-CREATE TABLE `github` (
+CREATE TABLE `githubs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(250) COLLATE utf8_bin DEFAULT NULL,
   `url` varchar(250) COLLATE utf8_bin NOT NULL,
@@ -113,7 +113,7 @@ def getGithubEmails(page,search,conn):
 
         if (search in emails or len(emails)>3):
             with conn.cursor() as cur:
-                exist = cur.execute('select title from github where title ="%s" LIMIT 1' % title)
+                exist = cur.execute('select title from githubs where title ="%s" LIMIT 1' % title)
                 if exist==0:
                     print("-------")
                     #print("https://github.com/search?o=desc&p=%d&q=%s&s=indexed&type=Code" % (page, search))
@@ -134,7 +134,7 @@ def getGithubEmails(page,search,conn):
                             pass
 
                     div_highlight_encoded = json.dumps(addslashes(div_highlight))
-                    cur.execute("insert into github (title, url, file, emails, html,lines_emails,label) values('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (title,src,title_url,emails_json,div_highlight_encoded,lines_json,str(search)))
+                    cur.execute("insert into githubs (title, url, file, emails, html,lines_emails,label) values('%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (title,src,title_url,emails_json,div_highlight_encoded,lines_json,str(search)))
 
 
 def main():

@@ -1,5 +1,5 @@
 # gitWhisper
-> Get the newest emails  and possible passwords  from code repository results github by tags filtering (Python3 based)
+> Get the newest emails and possible passwords from code repository results github by tags filtering (Python3 based)
 
 
 ## Instalation
@@ -12,6 +12,14 @@ Install python3 and pip3
 Install the dependencies via pip:
 
 <pre> pip3 install -r requirements.txt </pre>
+
+#### Telegram Implemetantion
+
+To used of the telegram bot you need to get the chat id
+<pre>
+https://github.com/Neorichi/telegramWhisper
+</pre>
+
 
 #### Important
 
